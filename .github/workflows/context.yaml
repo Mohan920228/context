@@ -1,0 +1,11 @@
+---
+name: context
+run-name: context
+on: workflow_dispatch
+jobs:
+    context-output:
+        runs-on: ubuntu-latest
+        steps:
+            - name: output github metadata
+              run : |
+                echo "Printing metadata of guthub ${{toJson(github)}}"
